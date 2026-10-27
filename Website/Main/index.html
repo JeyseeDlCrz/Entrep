@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title nung Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="script.js" defer></script>
+</head>
+<body>
+    <main id="dashboard" class="view">
+        <header class="dashboard-header">
+            <h1 id="welcome-msg">Welcome Back!</h1>
+            <p>Select a calculus topic below to start reading concepts and solving practice problems.</p>
+            <button onclick="handleLogout()" class="logout-btn">Log Out</button>
+        </header>
+
+        <div class="topic-grid">
+            <button class="topic-card" onclick="openTopic('Limits')">
+                <h3>Chapter 1</h3>
+                <p>Limits & Continuity</p>
+                <span class="badge">Read & Practice</span>
+            </button>
+            <button class="topic-card" onclick="openTopic('Derivatives')">
+                <h3>Chapter 2</h3>
+                <p>Derivatives & Rules</p>
+                <span class="badge">Read & Practice</span>
+            </button>
+        </div>
+    </main>
+    <section id="workspace" class="view hidden">
+        <button onclick="goBack()" class="back-btn">← Back to Topics</button>
+        
+        <div class="content-container">
+            <div class="reading-pane">
+                <h2 id="workspace-title">Topic Title</h2>
+                <div id="reading-content"></div>
+            </div>
+
+            <div class="practice-pane">
+                <h3>Practice Problem</h3>
+                <p id="question-text">Loading problem...</p>
+                <div class="input-group">
+                    <input type="text" id="user-answer" placeholder="Enter your answer...">
+                    <button onclick="checkAnswer()">Submit Answer</button>
+                </div>
+                <p id="feedback" class="feedback-text"></p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
