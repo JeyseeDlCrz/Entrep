@@ -306,6 +306,30 @@ button {
   gap: 1.5rem;
 }
 
+.study-options {
+  grid-template-columns: repeat (3, minmax (0, 1fr));
+}
+
+.topic-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.topic-label {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08rem;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+
+.topic-status{
+  color: var(--text-muted);
+  font-size: 0.9 rem;
+  margin-top: 1rem;
+}
+
 .info-card,
 .dashboard-card,
 .course-item,
@@ -321,6 +345,27 @@ button {
 .course-item h4 {
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
+}
+
+.dashboard-actions{
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 100%;
+  gap: 0.75rem;
+  margin-top: 1.25;
+}
+
+.topic-card .dashboard-actions {
+  margin-top: auto;
+  padding-top: 1.25rem;
+}
+
+.dashboard-actions .primary-btn,
+.dashboard-actions .secondary-btn {
+  flex: none;
+  width: 100%;
+  padding: 0.65rem 1rem;
+  text-align: center;
 }
 
 .course-list {
@@ -394,8 +439,8 @@ button {
 .footer {
     width: 100%;
     padding: 20px 0;
-    background:var(--accent-color);
-    color: #212d60;
+    background: #131935;
+    color: #fff;
     text-align: center;
 }
 
@@ -425,7 +470,7 @@ button {
 .footer-row .fa-brands {
     flex: 0 0 32px;
     font-size: 28px;
-    color: #212d60;
+    color: #fff;
 }
 
 @media (max-width: 768px) {
@@ -451,6 +496,11 @@ button {
     grid-template-columns: 1fr;
   }
 
+  .dashboard-actions .primary-btn,
+  .dashboard-actions .secondary-btn {
+    flex: 1 1 180px;
+  }
+
   .cta-row {
     width: 100%;
   }
@@ -463,8 +513,8 @@ button {
   .footer {
   width: 100%;
   padding: 10px 0;
-  background:var(--accent-color);
-  color: #212d60;
+  background:#131935;
+  color: #fff;
   text-align: center;
   }
 
@@ -494,6 +544,6 @@ button {
   .footer-row .fa-brands {
     flex: 0 0 35px;
     font-size: 22px;
-    color: #212d60;
+    color: #fff;
   }
 }
